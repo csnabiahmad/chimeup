@@ -11,18 +11,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = AquaBlue,
-    secondary = SoftViolet,
-    tertiary = MintGreen
+    primary = Primary,
+    secondary = Secondary,
+    tertiary = Background
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = AquaBlue,
-    secondary = SoftViolet,
-    tertiary = MintGreen,
+    primary = Primary,
+    secondary = Secondary,
+    tertiary = Background,
 
 //     Other default colors to override
-    background = OffWhite,
+    background = Background,
     surface = OffWhite,
     onBackground = DarkSlate,
     onSurface = DarkSlate,
@@ -34,6 +34,7 @@ fun ChimeUpTheme(
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
+
 ) {
     val colorScheme = when {
       dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
